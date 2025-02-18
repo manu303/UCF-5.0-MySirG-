@@ -4,6 +4,6 @@ int main(){
     int number;
     printf("Enter an integer: ");
     scanf("%d",&number);
-    printf("The updated variable is:%d",(number/10)*10);
+    printf("The updated result is:%d",(number/10)*10);
     return 0;
 }
