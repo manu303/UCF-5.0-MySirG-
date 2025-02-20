@@ -5,8 +5,8 @@ int main(){
     printf("Enter any integer number: ");
     scanf("%d",&number);
     if(number%2==0)
-        printf("Give number %d is divisible by 2.",number);
+        printf("Give number %d is even.",number);
     else
-        printf("Give number %d is not divisible by 2.",number);
+        printf("Give number %d is odd.",number);
     return 0;
 }
