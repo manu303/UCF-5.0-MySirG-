@@ -7,6 +7,6 @@ int main(){
     if((sub1>=33&&sub1<=100)&&(sub2>=33&&sub2<=100)&&(sub3>=33&&sub3<=100)&&(sub4>=33&&sub4<=100)&&(sub5>=33&&sub5<=100))
         printf("You passed the examination");
     else
-        printf("You failed the exam (or)/you enetred marks out of range(100)");
+        printf("You failed the exam (or)/you entered marks out of range(100)");
     return 0;
 }
