@@ -10,7 +10,7 @@ int main(){
         diff=num2-num1;
     if(diff==0)
         printf("%d",num1); //or num2
-    if((num1%diff==0)&&(num2%diff==0))
+    else if((num1%diff==0)&&(num2%diff==0))
         printf("HCF is %d",diff);
     else{
         i=diff/2;
