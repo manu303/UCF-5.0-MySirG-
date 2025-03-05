@@ -7,9 +7,7 @@ int main(){
         while(j<=i/2){
             if(i%j==0){
                 count++;
-                if(count>0){
-                    break;
-                }  
+                break;    
             }
             j++;
         }
