@@ -1,7 +1,8 @@
 //program to check whether a given number is there in the fibonacci series or not.
 #include<stdio.h>
 int main(){
-    int n,a=0,b=1,c,i=1;
+    int n,i=1;
+    long long int a=0,b=1,c;
     printf("Enter the number you want to check: ");
     scanf("%d",&n);
     if(n==0){
@@ -13,11 +14,11 @@ int main(){
         a=b;
         b=c;
         if(c==n){
-            printf("%d is in fibonacci series",n);
+            printf("%lld is in fibonacci series",n);
             break;
         }
         if(c>n){
-            printf("%d is not in fibonacci series",n);
+            printf("%lld is not in fibonacci series",n);
             break;
         }
         i++; 
