@@ -43,17 +43,18 @@ int main(){
             break;
 
             case 4:
-            int i,x;
-            printf("Enter a number");
-            scanf("%d",&x);
-            for(i=2;i<x;i++){
-                if(x%i==0)
+            int i,n;
+            printf("Enter +ve number:");
+            scanf("%d",&n);
+            for(i=2;i<n;i++){
+                if(n%2==0){
                 break;
+             }
             }
-            if(i==x)
-                printf("Prime\n");
+            if(i==n)
+                printf("prime\n");
             else
-                printf("Not Prime\n");
+                printf("not prime\n");
             break;
 
             case 5:
