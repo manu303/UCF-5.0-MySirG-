@@ -13,7 +13,7 @@ int main()
 void nprimes(int start,int end)
 {
     int i,j;
-    for(i=start;i<=end;i++){
+    for(i=start;i<end;i++){
         for(j=2;j<i;j++)
         {
             if(i%j==0)
