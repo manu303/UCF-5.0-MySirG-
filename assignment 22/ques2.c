@@ -14,15 +14,19 @@ int main()
 int comb(int n,int r)
 {
     int prod1=1,prod2=1,prod3=1;
-    //for n
-    for(int i=1;i<=n;i++)
-        prod1=prod1*i;
-    //for r
-    for(int j=1;j<=r;j++)
-        prod2=prod2*j;
-    //for n=r
-    for(int k=1;k<=(n-r);k++)
-        prod3=prod3*k;
-
-    return (prod1)/(prod2*prod3);
+    if(n>=r)
+    {
+        //for n
+        for(int i=1;i<=n;i++)
+            prod1=prod1*i;
+        //for r
+        for(int j=1;j<=r;j++)
+            prod2=prod2*j;
+        //for n-r
+        for(int k=1;k<=(n-r);k++)
+            prod3=prod3*k;
+        return (prod1)/(prod2*prod3);
+    }
+    else
+        return 0;
 }
