@@ -16,7 +16,7 @@ int main()
 
 int check(int num,int digit)
 {
-    for(num;num;num=num/10)
+    for(num;num>=0;num=num/10)
     {
         if((num%10)==digit)
             return 1;
