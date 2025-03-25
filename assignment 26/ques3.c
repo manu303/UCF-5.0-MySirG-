@@ -12,8 +12,8 @@ int main()
 
 int bin(int n)
 {
-    if(n==1)
-        return printf("%d",1);
+    if(n<2)
+        return printf("%d",n);
     bin(n/2);
     printf("%d",n%2);
 }
