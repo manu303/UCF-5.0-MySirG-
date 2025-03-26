@@ -6,6 +6,8 @@ int main()
     int n,res,count=1;
     printf("Enter num: ");
     scanf("%d",&n);
+    if(n<0)
+        n = -(n);
     res=countdigits(n,count);
     printf("no of digits are %d ",res);
     return 0;
