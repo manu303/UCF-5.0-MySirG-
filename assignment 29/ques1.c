@@ -1,13 +1,31 @@
-//
+//calculate sum of numbers
 #include<stdio.h>
+int input(int b[],int n);
+int sum(int c[],int n);
 int main()
 {
-    int a[10],i,sum=0;
-    printf("Enter 10 numbers: ");
-    for(i=0;i<=9;i++)
-        scanf("%d",&a[i]);
-    for(i=0;i<=9;i++)
-        sum=sum+a[i];
-    printf("The sum is %d",sum);
+    int n,res;
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+    int a[n];
+    printf("Enter %d numbers: ",n);
+    input(a,n);
+    res = sum(a,n);
+    printf("The sum is %d",res);
     return 0;
+}
+
+int input(int b[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+        scanf("%d",&b[i]);
+}
+
+int sum(int c[],int n)
+{
+    int i,s=0;
+    for(i=0;i<n;i++)
+        s=s+c[i];
+    return s;
 }
