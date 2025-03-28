@@ -1,4 +1,4 @@
-// Online C compiler to run C program online
+//rotate an array in given direction(left or right) and given  positions
 #include <stdio.h>
 int input(int b[],int size);
 int rotate_arr_left(int c[],int d[],int size,int pos);
