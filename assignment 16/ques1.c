@@ -1,24 +1,17 @@
 //program to print nth term of fibbonacci series.
 #include<stdio.h>
 int main(){
-    int term,i=0;
-    long long int c,a=0,b=1;
-    printf("Enter the term you want: ");
+    int term,a=-1,b=1,c;
+    printf("Enter term: ");
     scanf("%d",&term);
-    if(term==a){
-        printf("The %d term of fibonnaci series is %d",term,a);
+    while(term)
+    {
+        c=a+b;
+        a=b;
+        b=c;
+        term--;  
     }
-    else if(term==b){
-        printf("The %d term of fibonnaci series is %d",term,b);
-    }
-    else{
-        while(i<=(term-2)){
-            c=a+b;
-            a=b;
-            b=c;
-            i++;
-        }
-        printf("The %lld term of fibonnaci series is %lld",term,c);
-    }
+    printf("The requested term of fibonacci series is %d",c);
+    
     return 0;
 }
