@@ -5,8 +5,8 @@ int main(){
     printf("Enter the N: ");
     scanf("%d",&N);
     while(iter<=N){
-        printf("%d\n",iter);
-        iter=iter+2;
+        printf("%d\n",2*iter-1);
+        iter++;
     }
     return 0;
 }
