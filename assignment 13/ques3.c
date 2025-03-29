@@ -6,8 +6,8 @@ int main(){
     scanf("%d",&N);
     while (iter<=N)
     {
-        sum=sum+iter;
-        iter=iter+2;
+        sum=sum+2*iter-1;
+        iter++;
     }
     printf("Sum is %d",sum);
     return 0;
