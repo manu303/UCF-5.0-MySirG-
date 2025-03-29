@@ -1,31 +1,35 @@
 //program to check whether a given number is an armstrong or not.
-#include<stdio.h>
-int main(){
-    int num,sum=0,i=1,count=1,a,b,digits;
-    printf("Enter any number: ");
+#include <stdio.h>
+
+int main()
+{
+    int num,count=0,x,y;
+    printf("Enter number: ");
     scanf("%d",&num);
-    a=num;
-    b=num;
-    while(a/10>0){
-        count++;
-        a=a/10;
-    }
-    
-    while (i<=count)
+    x=num;
+    y=num;
+    //count digits
+    while(x)
     {
-        int prod=1;
-        digits=count;
-        while(digits>0){
-            prod=prod*(num%10);
+        x=x/10;
+        count++;
+    }
+    int digits,i,sum=0,prod;
+    for(i=1;i<=count;i++)
+    {
+        digits = count;
+        prod=1;
+        while(digits)
+        {
+            prod = prod * (y%10);
             digits--;
         }
-        sum=sum+prod;
-        num=num/10;
-        i++;
+        sum = sum + prod;
+        y=y/10;
     }
-    if(sum==b)
-        printf("Given number %d is armstrong number",b);
+    if(sum == num)
+        printf("Armstrong number");
     else
-        printf("Given number %d is not armstrong number",b);
-    return 0; 
+        printf("Not an Armstrong number");
+    return 0;
 }
