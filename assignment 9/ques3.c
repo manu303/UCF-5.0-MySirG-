@@ -4,9 +4,9 @@ int main(){
     char alphabet;
     printf("Enter any alphabet:");
     scanf("%c",&alphabet);
-    if((alphabet>=65)&&(alphabet<=90))
+    if((alphabet>='A')&&(alphabet<='Z'))
         printf("Given alphabet %c is uppercase.",alphabet);
-    else if ((alphabet>=97)&&(alphabet<=122))
+    else if ((alphabet>='a')&&(alphabet<='z'))
         printf("Given alphabet %c is lowercase.",alphabet);
     else
         printf("please enter valid alphabet not %c",alphabet);
