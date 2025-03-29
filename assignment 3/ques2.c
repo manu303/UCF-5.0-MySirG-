@@ -3,11 +3,9 @@
 int main(){
     
     int ascii;
-    char result;
     printf("Enter an ascii code:");
     scanf("%d",&ascii);
-    result=ascii;
-    printf("The Character is:%c",result);
+    printf("The Character is:%c",ascii);
     return 0;
 
 }
