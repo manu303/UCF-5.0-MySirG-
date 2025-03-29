@@ -1,25 +1,21 @@
 //program to find next prime number of a given number.
 #include<stdio.h>
 int main(){
-    int n,i;
-    printf("Enter starting prime number: ");
-    scanf("%d",&n);
-    i=n+1;
-    while(i<(n*2))
+    int num,i,j;
+    printf("Enter starting number: ");
+    scanf("%d",&num);
+    for(i=num+1;i<(num*2);i++) //bertard rule for prime numbers
     {
-        int count=0,j=2;
-        while(j<=i/2){
-            if(i%j==0){
-                count++;
+        for(j=2;j<=i;j++)
+        {
+            if(i%j==0)
                 break;
-            }
-            j++;
         }
-        if(count==0){
-            printf("%d",i);
+        if(i==j){
+            printf("The next prime number is %d ",i);
             break;
         }
-        i++;
+           
     }
     return 0;
 }
