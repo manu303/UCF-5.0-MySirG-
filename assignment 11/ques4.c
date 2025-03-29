@@ -2,9 +2,9 @@
 #include<stdio.h>
 int main(){
     int iter=1;
-    while(iter<=20){
-        printf("%d\n",iter);
-        iter = iter +2;
+    while(iter<=10){
+        printf("%d\n",2*iter-1);
+        iter++;
     }
     return 0;
 }
