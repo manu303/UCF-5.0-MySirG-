@@ -1,18 +1,15 @@
 //program to print first N natural even numbers in reverse order.
 #include<stdio.h>
 int main(){
-    int N;
+    int N,i;
     printf("Enter the N: ");
     scanf("%d",&N);
-    if (N%2!=0)
+    i=N;
+    while(i>0)
     {
-        N=N-1;
+        printf("%d ",2*i);
+        i--;
     }
-    while (N>=2)
-    {
-        printf("%d\n",N);
-        N = N-2;
-    } 
     return 0;
     
 }
