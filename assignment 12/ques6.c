@@ -1,12 +1,12 @@
 //program to print first n natural even numbers.
 #include<stdio.h>
 int main(){
-    int iter=2,N;
+    int iter=1,N;
     printf("Enter the N: ");
     scanf("%d",&N);
     while(iter<=N){
-        printf("%d\n",iter);
-        iter=iter+2;
+        printf("%d\n",2*iter);
+        iter++;
     }
     return 0;
 }
