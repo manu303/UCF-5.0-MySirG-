@@ -4,9 +4,11 @@ int main(){
     int num,count=0;
     printf("Enter any number: ");
     scanf("%d",&num);
-    if(num<0){
+    if(num<0)
         num = -(num);
-    }
+    else if(num==0)
+        count = 1;
+    
     //using while
 
     // while(num){
