@@ -5,13 +5,6 @@ int main(){
     int number,sum=0;
     printf("Enter any three digit number:");
     scanf("%d",&number);
-    sum = sum + number%10;
-    number = number/10;
-    sum = sum + number%10;
-    number = number/10;
-    sum = sum + number%10;
-    number = number/10;
-    printf("Sum of digits of a number is %d",sum);
-
+    printf("Sum of digits of a number is %d",(number/100)+(number/10)%(10)+(number%10));
     return 0;
 }
