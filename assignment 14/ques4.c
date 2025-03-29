@@ -1,37 +1,17 @@
 //program to calculate LCM of two numbers.
 #include<stdio.h>
 int main(){
-    int num1,num2,i=2;
+    int num1,num2,i,max;
     printf("Enter any two +ve numbers: ");
     scanf("%d%d",&num1,&num2);
-    if(num1>num2){
-        if((num1%num2) == 0)
-            printf("The LCM is %d",num1);
-        else{
-            while (i<=num2)
-            {
-                if((num1*i)%num2==0){
-                    printf("The LCM is %d",num1*i);
-                    break;
-                }
-                i++;
-            }  
-        }
-    }
-    else{ 
-        if((num2%num1)==0)
-            printf("The LCM is %d",num2);
-        else{
-            while(i<=num1)
-            {
-                if((num2*i)%num1==0){
-                    printf("The LCM is %d",num2*i);
-                    break;
-                }
-                i++;
-            }
-
-        }
+    max = num1>num2?num1:num2;
+    for(i=max;i<=num1*num2;i++)
+    {
+        if(i%num1==0 && i%num2==0)
+        {
+            printf("%d",i);
+            break;
+        }     
     }
     return 0;
 } 
