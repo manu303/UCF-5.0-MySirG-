@@ -1,20 +1,16 @@
 //program to print prime numbers under 100.
 #include<stdio.h>
 int main(){
-    int i=2;
-    while(i<100){
-        int count=0,j=2;
-        while(j<=i/2){
-            if(i%j==0){
-                count++;
-                break;    
-            }
-            j++;
+    int i,j;
+    for(i=2;i<100;i++)
+    {
+        for(j=2;j<=i;j++)
+        {
+            if(i%j==0)
+                break;
         }
-        if(count==0){
+        if(i==j)
             printf("%d ",i);
-        }
-        i++;
     }
     return 0;
 }
