@@ -1,10 +1,10 @@
 //print first 10 even natural numbers in reverse order.
 #include<stdio.h>
 int main(){
-    int iter=20;
-    while(iter>=2){
-        printf("%d\n",iter);
-        iter = iter - 2;
+    int iter=10;
+    while(iter>=1){
+        printf("%d\n",iter*2);
+        iter--;
     }
     return 0;
 }
