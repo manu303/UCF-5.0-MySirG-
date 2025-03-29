@@ -1,17 +1,14 @@
 //program to print first N odd natural numbers in reverse order.
 #include<stdio.h>
 int main(){
-    int N;
+    int N,i;
     printf("Enter the N: ");
     scanf("%d",&N);
-    if (N%2==0){
-        N=N-1;
-    }
-    while (N>=1)
+    i=N;
+    while(i>0)
     {
-        printf("%d\n",N);
-        N = N-2;
-    }  
-    
+        printf("%d ",2*i-1);
+        i--;
+    }
     return 0;
 }
