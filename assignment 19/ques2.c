@@ -33,6 +33,8 @@ int main(){
                 break;
             case 5:
                 exit(0);
+            default:
+                printf("Enter valid choice,retry.");
     }
 }
     return 0;
