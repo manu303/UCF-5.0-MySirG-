@@ -10,17 +10,30 @@ int main()
     return 0;
 }
 
+int prime(int num)
+{
+    int i;
+    for(i=2;i<num;i++){
+        if(num%i==0)
+            return 0;
+    }
+    return 1;
+}
+
+int nxtprime(int num)
+{
+    while(!prime(++num));
+    return num;
+}
+
 void nprimes(int n)
 {
-    int i,j;
-    for(i=2;i<=n;i++){
-        for(j=2;j<i;j++)
-        {
-            if(i%j==0)
-                break;
-        }
-        if(i==j)
-            printf("%d ",i);
+    int x=2;
+    while(n)
+    {
+        printf("%d ",x);
+        n--;
+        x=nxtprime(x);
     }
-    
+     
 }
