@@ -1,6 +1,7 @@
 //function to find the next prime number of a given number(TSRS)
 #include<stdio.h>
 int nxtprime(int num);
+int prime(int num);
 int main()
 {
     int num,result;
@@ -11,17 +12,18 @@ int main()
     return 0;
 }
 
+int prime(int num)
+{
+    int i;
+    for(i=2;i<num;i++){
+        if(num%i==0)
+            return 0;
+    }
+    return 1;
+}
+
 int nxtprime(int num)
 {
-    int i,j;
-    for(i=num+1;i<=2*num;i++){
-        for(j=2;j<i;j++)
-        {
-            if(i%j==0)
-                break;
-        }
-        if(i==j)
-            return i;
-    }
-    
+    while(!prime(++num));
+    return num;
 }
