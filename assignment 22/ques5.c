@@ -1,40 +1,30 @@
 //function to print all prime factors of a given number ex:36 -->2,2,3,3 (TSRN)
-#include<stdio.h>
-#include<stdlib.h>
-void primefact(int num);
-int main()
-{
-    int num;
-    printf("Enter number: ");
-    scanf("%d",&num);
-    primefact(num);
-    return 0;
-}
 
-void primefact(int num)
+#include <stdio.h>
+
+int primefactorization(int num)
 {
     int i,j;
-    for(i=2;i<=num;i++)
+    for(i=2;i<num;i++)
     {
-        for(j=2;j<i;j++)
+        for(j=2;j<=i;j++)
         {
             if(i%j==0)
                 break;
         }
         if(i==j)
-        {
-            while(num>1)
+            while(num%i==0)
             {
-                if(num%i==0)
-                {
-                    printf("%d ",i);
-                    num=num/i;
-                    if(num==1)
-                        exit(0);
-                }
-                else
-                    break;
+                printf("%d ",i);
+                num=num/i;
             }
-        }
     }
+}
+int main()
+{
+    int num;
+    printf("Enter number: ");
+    scanf("%d",&num);
+    primefactorization(num);
+    return 0;
 }
