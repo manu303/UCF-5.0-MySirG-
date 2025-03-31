@@ -15,7 +15,8 @@ int adjduplicate(int a[],int n)
         if(a[i+1] == a[i])
             return a[i+1];
     }
-    return -2;
+    printf("No adjacent duplicate value present");
+    exit(0);
 }
 
 int main()
@@ -26,11 +27,6 @@ int main()
     int arr[n];
     input(arr,n);
     res = adjduplicate(arr,n);
-    if(res==-2)
-    {
-        printf("No adjacent duplicate value present");
-        exit(0);
-    }
     printf("The adjacent duplicate value is %d",res);
     return 0;
 }
