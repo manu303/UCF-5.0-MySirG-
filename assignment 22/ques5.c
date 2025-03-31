@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int primefactorization(int num)
+void primefactorization(int num)
 {
     int i,j;
     for(i=2;i<num;i++)
