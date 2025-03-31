@@ -4,86 +4,44 @@
 int main(){
     while(1)
     {
-        int count;
+        int a,b,c;
+        printf("Enter three sides: ");
+        scanf("%d%d%d",&a,&b,&c);
+        int choice;
         printf("Enter your choice: \n\n");
         printf("1.Isosceles Triangle or not\n2.Right angled triangle or not\n3.Equilateral triangle or not\n4.Exit\n\n");
-        scanf("%d",&count);
-        int a,b,c;
-        switch(count)
+        scanf("%d",&choice);
+        if((a+b>c)&&(a+c>b)&&(b+c>a));
+        else
+            choice=5;
+        switch(choice)
         {
             case 1:
-            printf("Enter three sides: ");
-            scanf("%d%d%d",&a,&b,&c);
-            if((a+b>c)&&(a+c>b)&&(b+c>a))
-            {
-                if(a==b && b!=c)
-                    printf("Isosceles traingle\n");
-                else if(a==c && c!=b)
-                    printf("Isosceles traingle\n");
-                else if(b==c && c!=a)
-                    printf("Isosceles traingle\n");
+                if(a==b||b==c||c==a)
+                    printf("Iscosceles traingle\n");
                 else
-                    printf("Not an Isosceles traingle\n"); 
-            }
-            else{
-                printf("Not a valid triangle\n");   
-            }
-            break;
+                    printf("Not an isosceles traingle\n");
+                break;
             case 2:
-            int high,low1,low2;
-            printf("Enter three sides: ");
-            scanf("%d%d%d",&a,&b,&c);
-            if((a+b>c)&&(a+c>b)&&(b+c>a))
-            {
-                if((a>b)&&(a>c))
-                    {
-                        high=a;
-                        low1=b;
-                        low2=c;
-                    }
-                else if(b>c)
-                   {
-                        high=b;
-                        low1=a;
-                        low2=c;
-                   }
-                else
-                    {
-                        high=c;
-                        low1=a;
-                        low2=b; 
-                    } 
-                if((high*high)==(low1*low1)+(low2*low2))
+                if(a*a+b*b==c*c || a*a+c*c==b*b || b*b+c*c==a*a)
                     printf("Right angled triangle\n");
                 else
-                    printf("Not a Right angled triangle\n");
-            }
-            else{
-                printf("Not a valid triangle\n");
-            }
-            break;
+                    printf("Not a right angled triangle\n");
+                break;
             case 3:
-            printf("Enter three sides: ");
-            scanf("%d%d%d",&a,&b,&c);
-            if((a+b>c)&&(a+c>b)&&(b+c>a))
-            {
-                if((a==b) && (b==c))
+                if((a==b) && (a==c))
                     printf("Equilateral Triangle\n");
                 else
                     printf("Not an Equilateral Triangle\n");
-            }
-            else{
-                printf("Not a valid triangle\n"); 
-            }
-            break;
+                break;
             case 4:
-            exit(0);
-
+                exit(0);
+            case 5:
+                printf("Not a valid triangle\n");
+                break;
             default:
-            printf("Not a valid input.\n");
-
-        }
-        
+                printf("Not a valid input.\n");
+        } 
     }
     return 0;
 }
