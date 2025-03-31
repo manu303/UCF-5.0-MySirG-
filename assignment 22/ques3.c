@@ -1,6 +1,7 @@
 //calculate the no of arrangements one can make from n items and r selected at a time(TSRS)
 #include<stdio.h>
 int arrange(int n,int r);
+int fact(int n);
 int main()
 {
     int n,r,result;
@@ -13,18 +14,13 @@ int main()
 
 int arrange(int n,int r)
 {
-    int prod1=1,prod2=1;
-    if(n>=r)
-    {
-        //for n
-        for(int i=1;i<=n;i++)
-            prod1=prod1*i;
-        //for n-r
-        for(int k=1;k<=(n-r);k++)
-            prod2=prod2*k;
+    return fact(n)/fact(n-r); 
+}
 
-        return (prod1)/(prod2);
-    }
-    else
-        return 0; 
+int fact(int n)
+{
+    int fact=1,i;
+    for(i=1;i<=n;i++)
+        fact = fact * i;
+    return fact;
 }
