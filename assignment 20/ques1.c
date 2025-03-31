@@ -26,7 +26,7 @@ int main(){
         printf("Grade E\n");
         break;
 
-    case 1 ... 49:
+    case 0 ... 49:
         printf("Grade F\n");
         break;
     
