@@ -6,11 +6,13 @@ int main()
     int num,digit,result;
     printf("Enter number and digit: ");
     scanf("%d%d",&num,&digit);
+    if(num<0)
+        num = -(num);
     result = check(num,digit);
     if(result)
-        printf("The digit %d is present in %d",digit,num);
+        printf("present");
     else
-        printf("The digit %d is not present in %d",digit,num);
+        printf("Not present");
     return 0;
 }
 
