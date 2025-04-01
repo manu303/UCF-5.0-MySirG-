@@ -1,19 +1,20 @@
 //recursive function to print N natural numbers.
-#include<stdio.h>
-int naturalnum(int n);
-int main()
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void FirstNnaturalNums(int n)
 {
-    int n;
-    printf("Enter N: ");
-    scanf("%d",&n);
-    naturalnum(n);
-    return 0;
+    if(n>0)
+    {
+        FirstNnaturalNums(n-1);
+        printf("%d ",n);
+    }
 }
 
-int naturalnum(int n)
-{
-    if(n==1)
-        return printf("%d ",1);
-    naturalnum(n-1);
-    printf("%d ",n);
+int main() {
+    int n;
+    printf("Enter n: ");
+    scanf("%d",&n);
+    FirstNnaturalNums(n);
+    return 0;
 }
