@@ -1,19 +1,19 @@
 //recursive function print natural numbers in reverse order.
-#include<stdio.h>
-int naturalnumrev(int n);
-int main()
+#include <stdio.h>
+
+void FirstNnaturalNumsrev(int n)
 {
+    if(n>0)
+    {
+        printf("%d ",n);
+        FirstNnaturalNumsrev(n-1);
+    }
+}
+
+int main() {
     int n;
     printf("Enter n: ");
     scanf("%d",&n);
-    naturalnumrev(n);
+    FirstNnaturalNumsrev(n);
     return 0;
-}
-
-int naturalnumrev(int n)
-{
-    if(n==1)
-        return printf("%d ",1);
-    printf("%d ",n);
-    naturalnumrev(n-1);
 }
