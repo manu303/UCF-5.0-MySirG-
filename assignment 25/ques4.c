@@ -1,18 +1,19 @@
 //recursive function to print odd numbers in reverse order.
-#include<stdio.h>
-int oddnatnum(int n);
-int main()
+#include <stdio.h>
+
+void FirstNnaturalNumsoddrev(int n)
 {
-    int n;
-    printf("enter n: ");
-    scanf("%d",&n);
-    oddnatnum(n);
+    if(n>0)
+    {
+        printf("%d ",2*n-1);
+        FirstNnaturalNumsoddrev(n-1);
+    }
 }
 
-int oddnatnum(int n)
-{
-    if(n==1)
-        return printf("%d ",1);
-    printf("%d ",n*2-1);
-    oddnatnum(n-1);
+int main() {
+    int n;
+    printf("Enter n: ");
+    scanf("%d",&n);
+    FirstNnaturalNumsoddrev(n);
+    return 0;
 }
