@@ -1,26 +1,18 @@
 //recursive function to print hcf of two given numbers
-#include<stdio.h>
-int HCF(int a,int b,int c);
-int main()
+#include <stdio.h>
+int HCF(int a,int b)
 {
-    int a,b,c,res;
-    printf("Enter num1 and num2: ");
-    scanf("%d%d",&a,&b);
-    c=a<b?a:b;
-    res = HCF(a,b,c);
-    printf("The HCF is %d",res);
-    return 0;
+    if(b>0)
+    {
+        return HCF(b,a%b);
+    }
+    return a;
 }
-
-int HCF(int a,int b,int c)
-{
-
-    if(a==0)
-        return b;
-    else if(b==0)
-        return a;
-    else if(a%c==0 && b%c==0)
-        return c;
-    else
-        return HCF(a,b,c-1);
+int main() {
+    int a,b,res;
+    printf("Enter two numbers:");
+    scanf("%d%d",&a,&b);
+    res = HCF(a,b);
+    printf("The HCF of %d and %d is %d",a,b,res);
+    return 0;
 }
