@@ -1,13 +1,12 @@
 //recursive function to print first n odd natural numbers.
-// Online C compiler to run C program online
 #include <stdio.h>
 
 void FirstNnaturalNumsoddrev(int n)
 {
     if(n>0)
     {
-        printf("%d ",2*n-1);
         FirstNnaturalNumsoddrev(n-1);
+        printf("%d ",2*n-1);
     }
 }
 
