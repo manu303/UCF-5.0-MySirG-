@@ -1,21 +1,26 @@
 //recursive function to print first n terms of fibonacci series
-#include<stdio.h>
-int fibb(int a,int b,int c,int n);
-int main()
-{
-    int a,b,c,n;
-    a=-1,b=1,c=a+b;
-    printf("Enter n: ");
-    scanf("%d",&n);
-    fibb(a,b,c,n);
-    return 0;
-}
+// Online C compiler to run C program online
+#include <stdio.h>
 
-int fibb(int a,int b,int c,int n)
+int fib(int n)
 {
-    if(n==1)
-        return printf("%d ",a+b);
-    c=a+b;
-    printf("%d ",c);
-    fibb(b,c,a+b,n-1);
+    if(n==0||n==1)
+        return n;
+    return fib(n-2)+fib(n-1);
+}
+void printfibb(int n)
+{
+    if(n>=0)
+    {
+       printfibb(n-1);
+       printf("%d ",fib(n));
+    }
+
+}
+int main() {
+    int n,res;
+    printf("Enter n:");
+    scanf("%d",&n);
+    printfibb(n);
+    return 0;
 }
