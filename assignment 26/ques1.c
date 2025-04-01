@@ -1,19 +1,17 @@
 //recursive function to print first n even numbers in reverse order.
-#include<stdio.h>
-int evennatnumrev(int n);
-int main()
+#include <stdio.h>
+void FirstNnaturalNumsevenrev(int n)
 {
+    if(n>0)
+    {
+        printf("%d ",2*n);
+        FirstNnaturalNumsevenrev(n-1);
+    }
+}
+int main() {
     int n;
     printf("Enter n: ");
     scanf("%d",&n);
-    evennatnumrev(n);
+    FirstNnaturalNumsevenrev(n);
     return 0;
-}
-
-int evennatnumrev(int n)
-{
-    if(n==1)
-        return printf("%d ",2);
-    printf("%d ",2*n);
-    evennatnumrev(n-1);
 }
