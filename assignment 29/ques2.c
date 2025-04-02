@@ -1,31 +1,16 @@
 //calculate average using arrays
-#include<stdio.h>
-int input(int a[],int n);
-float avg(int c[],int n);
-int main()
-{
-    int n;
-    printf("Enter size of array: ");
-    scanf("%d",&n);
-    int a[n],i;
-    float res;
-    printf("Enter %d numbers: ",n);
-    input(a,n);
-    res = avg(a,n);
-    printf("The average is %.2f",res);
-}
+#include <stdio.h>
 
-int input(int b[],int n)
-{
-    int i;
-    for(i=0;i<n;i++)
-        scanf("%d",&b[i]);
-}
-
-float avg(int c[],int n)
-{
-    int i,sum=0;
-    for(i=0;i<n;i++)
-        sum=sum+c[i];
-    return sum/(n*1.0);
+int main() {
+   
+    int arr[10],i,sum=0;
+    float avg;
+    printf("Enter 10 numbers:");
+    for(i=0;i<10;i++)
+        scanf("%d",&arr[i]);
+    for(i=0;i<10;i++)
+        sum=sum+arr[i];
+    avg=sum/10.0;
+    printf("Average of numbers stored in array is %.1f",avg);
+    return 0;
 }
