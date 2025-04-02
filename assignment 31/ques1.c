@@ -25,10 +25,11 @@ int input(int c[],int n)
 int greatestnum(int b[],int n)
 {
     int i,big;
-    big = b[0]>b[1]?b[0]:b[1];
-    for(i=0;i<n;i++)
+    big = b[0];
+    for(i=1;i<=n;i++)
     {
-        big = big>b[i]?big:b[i];
+        if(b[i]>big)
+            big = b[i];
     }
     return big;
 }
