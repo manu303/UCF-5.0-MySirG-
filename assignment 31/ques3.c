@@ -1,6 +1,6 @@
 //function to sort an array.
 #include<stdio.h>
-int sort(int c[],int n);
+void sort(int c[],int n);
 int input(int b[],int n);
 int printarr(int d[],int n);
 int main()
@@ -23,7 +23,7 @@ int input(int b[],int n)
         scanf("%d",&b[i]);
 }
 
-int sort(int c[],int n)
+void sort(int c[],int n)
 {
     int round,i,temp;
     for(round=1;round<=n-1;round++)
