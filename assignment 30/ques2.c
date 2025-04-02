@@ -1,54 +1,22 @@
 //print second largest element in array.
-#include<stdio.h>
-int input(int b[],int n);
-int sort(int c[],int n);
-int secondlargest(int d[],int n);
-int main()
-{
-    int n;
-    printf("Enter size of array: ");
-    scanf("%d",&n);
-    int a[n];
-    printf("Enter %d number:",n);
-    input(a,n);
-    sort(a,n);
-    printf("Second largest element is:");
-    secondlargest(a,n);
-    return 0;
-}
-
-int input(int b[],int n)
-{
-    int i;
-    for(i=0;i<n;i++)
-        scanf("%d",&b[i]); 
-}
-
-int sort(int c[],int n)
-{
-    int i,j;
-    for(i=0;i<n;i++)
+#include <stdio.h>
+int main() {
+    int a[10],i,temp,round;
+    printf("Enter 10 numbers: ");
+    for(i=0;i<10;i++)
+        scanf("%d",&a[i]);
+    for(round=1;round<=2;round++)
     {
-        for(j=i+1;j<n;j++)
+        for(i=0;i<=9-round;i++)
         {
-            if(c[i] > c[j])
+            if(a[i]>a[i+1])
             {
-                c[i] = c[i];
-                c[j] = c[j];
-            }
-            else
-            {
-                c[i] = c[i] + c[j];
-                c[j] = c[i] - c[j];
-                c[i] = c[i] - c[j];
-                
-                // (or) c[i] = c[i] + c[j] - (c[j]=c[i]);
+                temp=a[i];
+                a[i]=a[i+1];
+                a[i+1]=temp;
             }
         }
     }
-}
-
-int secondlargest(int d[],int n)
-{
-        printf("%d ",d[1]);
+    printf("Second largest value in an array is %d",a[8]);
+    return 0;
 }
