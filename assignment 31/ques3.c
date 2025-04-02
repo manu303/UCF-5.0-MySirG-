@@ -28,7 +28,7 @@ int sort(int c[],int n)
     int round,i,temp;
     for(round=1;round<=n-1;round++)
     {
-        for(i=0;i<=(n-1)-round;i++) //j=0(descending order because we are going back and checking that number) //j=i+1(ascending order because we are not going back and checking that number.)
+        for(i=0;i<=(n-1)-round;i++) 
         {
             if(c[i]>c[i+1])
             {
