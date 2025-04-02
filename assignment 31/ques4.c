@@ -49,10 +49,8 @@ int rotate_arr_left(int c[],int d[],int size,int pos)
         {
             d[size-pos+i] = c[i];
         }
-        else if(i<size)
-        {
-            d[(size-pos+i)%size] = c[i];
-        }
+        d[(size-pos+i)%size] = c[i];
+
     }  
     
 }
@@ -65,10 +63,7 @@ int rotate_arr_right(int e[],int f[],int size,int pos)
         {
             f[pos+i] = e[i];
         }
-        else if(i<size)
-        {
-            f[(pos+i)%size] = e[i];
-        }
+        f[(pos+i)%size] = e[i];
     }
     
 }
