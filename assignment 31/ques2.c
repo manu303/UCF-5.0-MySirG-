@@ -24,8 +24,11 @@ int input(int b[],int n)
 int smallestnum(int c[],int n)
 {
     int i,small;
-    small = c[0]<c[1]?c[0]:c[1];
-    for(i=0;i<n;i++)
-        small = small < c[i]?small:c[i];
+    small = c[0];
+    for(i=1;i<n;i++)
+    {
+        if(c[i]<small)
+            small = c[i];
+    } 
     return small;
 }
