@@ -1,56 +1,24 @@
 //sort array in descending order.
-#include<stdio.h>
-int input(int b[],int n);
-int sort(int c[],int n);
-int printarr(int d[],int n);
-int main()
-{
-    int n;
-    printf("Enter size of array: ");
-    scanf("%d",&n);
-    int a[n];
-    printf("Enter %d number:",n);
-    input(a,n);
-    sort(a,n);
-    printf("Sorted array is:");
-    printarr(a,n);
-    return 0;
-}
-
-int input(int b[],int n)
-{
-    int i;
-    for(i=0;i<n;i++)
-        scanf("%d",&b[i]); 
-}
-
-int sort(int c[],int n)
-{
-    int i,j;
-    for(i=0;i<n;i++)
+#include <stdio.h>
+int main() {
+    int a[10],i,temp,round;
+    printf("Enter 10 numbers: ");
+    for(i=0;i<10;i++)
+        scanf("%d",&a[i]);
+    for(round=1;round<=9;round++)
     {
-        for(j=i+1;j<n;j++)
+        for(i=0;i<=9-round;i++)
         {
-            if(c[i] > c[j])
+            if(a[i]<a[i+1])
             {
-                c[i] = c[i];
-                c[j] = c[j];
-            }
-            else
-            {
-                c[i] = c[i] + c[j];
-                c[j] = c[i] - c[j];
-                c[i] = c[i] - c[j];
-                
-                // (or) c[i] = c[i] + c[j] - (c[j]=c[i]);
+                temp=a[i];
+                a[i]=a[i+1];
+                a[i+1]=temp;
             }
         }
     }
-}
-
-int printarr(int d[],int n)
-{
-    int i;
-    for(i=0;i<n;i++)
-        printf("%d ",d[i]);
+    printf("Sorted array: ");
+    for(i=0;i<10;i++)
+        printf("%d ",a[i]);
+    return 0;
 }
