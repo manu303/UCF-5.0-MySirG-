@@ -26,7 +26,7 @@ int greatestnum(int b[],int n)
 {
     int i,big;
     big = b[0];
-    for(i=1;i<=n;i++)
+    for(i=1;i<n;i++)
     {
         if(b[i]>big)
             big = b[i];
