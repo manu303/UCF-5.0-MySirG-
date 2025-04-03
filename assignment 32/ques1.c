@@ -1,3 +1,4 @@
+//swap two elements of gioven array with specified indices.
 #include <stdio.h>
 int input(int a[],int n)
 {
