@@ -1,42 +1,35 @@
 //function to count frequency of each element of an array.
 #include <stdio.h>
-
-int freq(int a[],int element,int n,int index)
+void FreqOfUnqElement(int arr[],int size)
 {
-    int j,count=0;
-    for(j=1;j<n;j++)
+    int visited[size],inner,outer;
+    for(int i=0;i<size;i++)
+        visited[i]=0;
+    for(outer = 0;outer<size;outer++)
     {
-        if(index == j)
-            continue;
-        if(a[j] == element)
+        if(visited[outer]==1)
+                continue;
+        int count=0;
+        for(inner = outer+1;inner<size;inner++)
         {
-            if(a[index-1] == a[j])
-                break;
-            count = count+1;
+            if(arr[outer] == arr[inner])
+                {
+                    count++;
+                    visited[inner] = 1;
+                }
         }
-        else
-            continue;
+        printf("%d-%dtimes\n",arr[outer],count);
     }
-    return count;
+    
 }
-
 int main() {
-    int n,i;
-    printf("Enter size of array: ");
-    scanf("%d",&n);
-    int a[n];
-    printf("enter %d numbers:",n);
-    for(i=0;i<n;i++)
-        scanf("%d",&a[i]);
-    for(i=0;i<n;i++)
-    {
-        int res;
-        res = freq(a,a[i],n,i);
-        if(res==0)
-        {
-            continue;
-        }
-        printf("%d - %dtimes\n",a[i],res);
-    }
+    int size,inp;
+    printf("Enter size of an array:");
+    scanf("%d",&size);
+    int arr[size];
+    printf("Enter %d numbers",size);
+    for(inp=0;inp<size;inp++)
+        scanf("%d",&arr[inp]);
+    FreqOfUnqElement(arr,size);
     return 0;
 }
