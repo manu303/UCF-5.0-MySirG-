@@ -1,6 +1,6 @@
 //print unique elemnts in an array.
 #include <stdio.h>
-void FreqOfUnqElement(int arr[],int size)
+void UnqElement(int arr[],int size)
 {
     int visited[size],inner,outer;
     for(int i=0;i<size;i++)
@@ -10,16 +10,14 @@ void FreqOfUnqElement(int arr[],int size)
     {
         if(visited[outer]==1)
                 continue;
-        int count=0;
         for(inner = outer+1;inner<size;inner++)
         {
             if(arr[outer] == arr[inner])
                 {
-                    count++;
                     visited[inner] = 1;
                 }
         }
-        printf("%d ",arr[outer],count);
+        printf("%d ",arr[outer]);
     }
     
 }
@@ -31,6 +29,6 @@ int main() {
     printf("Enter %d numbers",size);
     for(inp=0;inp<size;inp++)
         scanf("%d",&arr[inp]);
-    FreqOfUnqElement(arr,size);
+    UnqElement(arr,size);
     return 0;
 }
