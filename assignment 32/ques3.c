@@ -1,27 +1,36 @@
 //print unique elemnts in an array.
 #include <stdio.h>
-void unique(int a[],int n)
+void FreqOfUnqElement(int arr[],int size)
 {
-    int i,unq=a[0];
-    printf("%d ",unq);
-    for(i=1;i<n;i++)
+    int visited[size],inner,outer;
+    for(int i=0;i<size;i++)
+        visited[i]=0;
+    printf("unique elements are:");
+    for(outer = 0;outer<size;outer++)
     {
-        if(a[i] == unq)
-            continue;
-        else
-            printf("%d ",a[i]);
-            unq=a[i];
+        if(visited[outer]==1)
+                continue;
+        int count=0;
+        for(inner = outer+1;inner<size;inner++)
+        {
+            if(arr[outer] == arr[inner])
+                {
+                    count++;
+                    visited[inner] = 1;
+                }
+        }
+        printf("%d ",arr[outer],count);
     }
+    
 }
-
 int main() {
-    int n,i;
-    printf("Enter size of array: ");
-    scanf("%d",&n);
-    int a[n];
-    printf("enter %d numbers:",n);
-    for(i=0;i<n;i++)
-        scanf("%d",&a[i]);
-    unique(a,n);
+    int size,inp;
+    printf("Enter size of an array:");
+    scanf("%d",&size);
+    int arr[size];
+    printf("Enter %d numbers",size);
+    for(inp=0;inp<size;inp++)
+        scanf("%d",&arr[inp]);
+    FreqOfUnqElement(arr,size);
     return 0;
 }
