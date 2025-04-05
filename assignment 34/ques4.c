@@ -2,23 +2,14 @@
 #include<stdio.h>
 int main()
 {
-    char str[50];
+    char str[50],i;
     printf("Enter a string:");
     fgets(str,50,stdin);
-    // Remove the newline character left by fgets
-    // int len = 0;
-    // while (str[len] != '\0') 
-    // {
-    //     len++;
-    // }
-
-    // if (str[len - 1] == '\n') 
-    // {
-    //     str[len - 1] = '\0';  // Replace the newline with a null terminator
-    // }
-    
+    for(i=0;str[i]!='\n';i++);
+    if(str[i]=='\n')
+        str[i]='\0';
     int count=0;
-    for(int i=0;str[i];i++)
+    for(i=0;str[i];i++)
     {
         if(str[i]==' ')
             count++;
