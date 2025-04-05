@@ -14,4 +14,5 @@ int main()
             count++;
     }
     printf("\nThe occurence of charcater '%c' in the given string is %d times.",ch,count);
+    return 0;
 }
