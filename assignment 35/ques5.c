@@ -1,3 +1,4 @@
+//first occurence of a given character in a given string.
 #include<stdio.h>
 int main()
 {
@@ -15,6 +16,9 @@ int main()
         if(str[i]==ch)
             break;
     }
-    printf("The first occurence of the character '%c' at %d characater in the given string.",ch,i+1);
+    if(str[i]==ch)
+        printf("The first occurence of the character '%c' at %d characater in the given string.",ch,i+1);
+    else
+        printf("The char %c was not founf in the given string",ch);
     return 0;
 }
