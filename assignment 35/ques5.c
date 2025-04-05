@@ -19,6 +19,6 @@ int main()
     if(str[i]==ch)
         printf("The first occurence of the character '%c' at %d characater in the given string.",ch,i+1);
     else
-        printf("The char %c was not founf in the given string",ch);
+        printf("The char %c was not found in the given string",ch);
     return 0;
 }
