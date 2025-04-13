@@ -2,11 +2,23 @@
 #include<stdio.h>
 int findword(char str[],char word[])
 {
-    int i,j,k;
-    char index[50];
+    int i,j;
     for(i=0;str[i];i++)
     {
-        if(str[i]==' ')
+        if (i==0)
+        {
+            if((str[i]>='a'&&str[i]<='z') || (str[i]>='A'&&str[i]<='Z'))
+            {
+                for(j=0;word[j];j++)
+                {
+                    if(word[j]!=str[i+j])
+                        break;
+                }
+                if(word[j]=='\0')
+                    return i;
+            }
+        }
+        else if(str[i]==' ')
         {
             if((str[i+1]>='a'&&str[i+1]<='z') || (str[i+1]>='A'&&str[i+1]<='Z'))
             {
@@ -20,7 +32,7 @@ int findword(char str[],char word[])
             }
         }
     }
-    return 0;
+    return -1;
 }
 
 int main()
@@ -37,7 +49,7 @@ int main()
     for(i=0;word[i];i++);
     word[i-1]='\0';
     res = findword(str,word);
-    if(res==0)
+    if(res==-1)
         printf("Not found");
     else
         printf("The word \"%s\" present at index %d",word,res);
