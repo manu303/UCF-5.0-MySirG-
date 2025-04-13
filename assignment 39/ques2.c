@@ -18,7 +18,7 @@ int findword(char str[],char word[])
                     return i;
             }
         }
-        else if(str[i]==' ')
+        else if(str[i]==32 || str[i]==44 || str[i]==46 || str[i]==9 || str[i]==10 || str[i]==58 || str[i]==59 || str[i]==63 || str[i]==33 || str[i]==40 || str[i]==41)
         {
             if((str[i+1]>='a'&&str[i+1]<='z') || (str[i+1]>='A'&&str[i+1]<='Z'))
             {
