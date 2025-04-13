@@ -1,6 +1,6 @@
 //function to concatenate two strings
 #include<stdio.h>
-void concat(char str1[],char str2[],int size)
+void concat(char str1[],char str2[])
 {
     int i,j;
     for(i=0;str1[i];i++);
@@ -24,7 +24,7 @@ int main()
     fgets(str2,50,stdin);
     for(i=0;str2[i];i++);
     str2[i-1]='\0';
-    concat(str1,str2,50);
+    concat(str1,str2);
     printf("Concatenated string:%s",str1);
     return 0;
 }
