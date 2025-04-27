@@ -1,8 +1,8 @@
-//function to find the highest salary employee from a given array of 10 employees.
+//function to sort employees according to thier salaries.
 #include<stdio.h>
 #include<string.h>
 struct Employee input(int i);
-void highest_salary(struct Employee *empptr);
+void sort(struct Employee *empptr);
 struct Employee 
 {
     int id;
@@ -16,7 +16,7 @@ int main()
     int i;
     for(i=0;i<10;i++)
         emp[i]=input(i);
-    highest_salary(emp);
+    sort(emp);
     printf("----------Sorted list----------\n");
     for(i=0;i<10;i++)
     {
@@ -40,7 +40,7 @@ struct Employee input(int i)
     return emp;
 }
 
-void highest_salary(struct Employee *empptr)
+void sort(struct Employee *empptr)
 {
 
     int i,j;
