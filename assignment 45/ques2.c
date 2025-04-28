@@ -1,7 +1,7 @@
 //program to store information of 10 students and display them using structure.
 #include<stdio.h>
 #include<string.h>
-struct student input();
+struct student input(int i);
 void display(struct student stu);
 struct student
 {
@@ -15,7 +15,7 @@ int main()
     int i;
     for(i=0;i<10;i++)
     {
-        student[i]=input();
+        student[i]=input(i);
     }
     for(i=0;i<10;i++)
     {
@@ -24,10 +24,10 @@ int main()
     return 0;
 }
 
-struct student input()
+struct student input(int i)
 {
     struct student stu;
-    printf("Enter student roll number and name:");
+    printf("Enter student %d roll number and name:",i+1);
     scanf("%d",&stu.roll_no);
     getchar();
     fgets(stu.name,50,stdin);
