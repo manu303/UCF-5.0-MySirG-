@@ -6,8 +6,13 @@ int main()
     printf("Enter how many values you want to enter:");
     int n;
     scanf("%d",&n);
-    float *ptr;
+    float *ptr=NULL;
     ptr = (float*)malloc(n*sizeof(float));
+    if(ptr==NULL)
+    {
+        printf("memory allocation error");
+        exit(0);
+    }
     int i;
     for(i=0;i<n;i++)
     {
@@ -22,5 +27,6 @@ int main()
         sum=sum+ptr[i];
     }
     printf("The average of %d data points is %.2f",n,sum/(n*1.0));
+    free(ptr);
     return 0;
 } 
