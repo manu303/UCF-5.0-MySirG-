@@ -5,10 +5,10 @@ void prime_nums(int start,int end);
 int main()
 {
     int start,end;
-    printf("Enter starting number:");
-    scanf("%d",&start);
-    printf("Enter ending number:");
-    scanf("%d",&end);
+    cout<<"Enter starting number:";
+    cin>>start;
+    cout<<"Enter ending number:";
+    cin>>end;
     prime_nums(start,end);
     return 0;
 }
@@ -16,7 +16,7 @@ int main()
 void prime_nums(int start,int end)
 {
     int i,j;
-    printf("Prime numbers between %d and %d are:",start,end);
+    cout<<"Prime numbers between "<<start<<" and " <<end <<" are:";
     for(i=start+1;i<end;i++)
     {
         if(i<2)
@@ -32,7 +32,7 @@ void prime_nums(int start,int end)
         }
         if(j==i)
         {
-            printf("%d ",i);
+            cout<<" "<<i;
         }
         
     }
