@@ -40,8 +40,8 @@ class Complex
         Complex multiply(Complex c1)
         {
             Complex temp;
-            temp.a = a*c1.a;
-            temp.b = b*c1.b;
+            temp.a = a*c1.a - b*c1.b;    // Real part: a*c - b*d
+            temp.b = a*c1.b + b*c1.a;    // Imaginary part: a*d + b*c
             return temp;
         }
 };
