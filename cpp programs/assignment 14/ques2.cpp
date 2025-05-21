@@ -22,7 +22,7 @@ class Time
         
         void show_time()
         {
-            cout << *this; // Use the insertion operator internally
+            cout << *this; 
         }
         
         friend ostream& operator<<(ostream&, Time);
@@ -51,7 +51,7 @@ int main()
     cin >> t1;
     cout << t1;
     
-    cout << "Enter hr, mins and seconds for t2 time object: ";  // Fixed typo here
+    cout << "Enter hr, mins and seconds for t2 time object: ";  
     cin >> t2;
     cout << t2;
     
