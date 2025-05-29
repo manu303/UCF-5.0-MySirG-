@@ -69,39 +69,6 @@ public:
         cout << "Creating a dynamic array of " << size << " Time objects." << endl;
         return new Time[size]; 
     }
-    static Time* sorttime(Time* timeArrayPtr,int size)
-    {
-        for(int i=0;i<size;i++)
-        {
-            for(int j=i+1;j<size;j++)
-            {
-                if(timeArrayPtr[i].hr > timeArrayPtr[j].hr)
-                {
-                    Time temp;
-                    temp= timeArrayPtr[i];
-                    timeArrayPtr[i] = timeArrayPtr[j];
-                    timeArrayPtr[j] = temp; 
-                }
-                if((timeArrayPtr[i].hr == timeArrayPtr[j].hr)&&(timeArrayPtr[i].min > timeArrayPtr[j].min))
-                {
-                    Time temp;
-                    temp= timeArrayPtr[i];
-                    timeArrayPtr[i] = timeArrayPtr[j];
-                    timeArrayPtr[j] = temp;
-                }
-                if((timeArrayPtr[i].hr == timeArrayPtr[j].hr)&&(timeArrayPtr[i].min == timeArrayPtr[j].min)&&(timeArrayPtr[i].sec > timeArrayPtr[j].sec))
-                {
-                    Time temp;
-                    temp= timeArrayPtr[i];
-                    timeArrayPtr[i]= timeArrayPtr[j];
-                    timeArrayPtr[j]= temp;
-                }
-            }
-            
-        }
-        return timeArrayPtr;
-    }
-
 };
 
 int main() {
@@ -109,13 +76,5 @@ int main() {
     Time* timeArrayPtr = nullptr; 
 
     timeArrayPtr = Time::createTimeArray(arraySize);
-    for(int i =0;i<arraySize;i++)
-    {
-        cout<<"Enter "<<i+1<<"time object values(hr,min,sec):";
-        int hr,min,sec;
-        cin>>hr>>min>>sec;
-        timeArrayPtr[i].setTime(hr,min,sec);
-    }
-    timeArrayPtr = Time::sorttime(timeArrayPtr,arraySize);
     return 0;
 }
