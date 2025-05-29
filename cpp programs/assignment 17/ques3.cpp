@@ -117,5 +117,6 @@ int main() {
         timeArrayPtr[i].setTime(hr,min,sec);
     }
     timeArrayPtr = Time::sorttime(timeArrayPtr,arraySize);
+    delete []timeArrayPtr;
     return 0;
 }
