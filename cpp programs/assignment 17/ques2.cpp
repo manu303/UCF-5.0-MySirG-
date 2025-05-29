@@ -76,5 +76,6 @@ int main() {
     Time* timeArrayPtr = nullptr; 
 
     timeArrayPtr = Time::createTimeArray(arraySize);
+    delete []timeArrayPtr;
     return 0;
 }
