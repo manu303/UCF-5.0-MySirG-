@@ -1,0 +1,19 @@
+
+1
+teja
+10000
+2
+manu
+20000
+4
+prudvi
+60000
+5
+lokesh
+90000
+7
+kalyan guttula
+70000
+8
+pavan karani
+80000
